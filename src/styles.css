@@ -1,0 +1,104 @@
+:root, html[data-theme="light"] {
+	--background: #eeeeee;
+
+	--note-background: rgba(0, 0, 0, 0.05);
+	--note-colour: black;
+	
+	--add-button-background: rgba(0, 0, 0, 0.05);
+	--add-button-color: rgba(255, 255, 255, 0.5);
+	--add-button-hover-background: white;
+	--add-button-hover-color: rgba(0, 0, 0, 0.2);
+
+	--toggle-button-background: rgba(0, 0, 0, 0.05);
+	--toggle-button-color: white;
+
+	--title: darkgrey;
+}
+
+html[data-theme="dark"] {
+	--background: #212121;
+	--note-background: rgba(255, 255, 255, 0.05);
+	--note-colour: white;
+
+	--add-button-background: rgba(255, 255, 255, 0.05);
+	--add-button-color: rgba(0, 0, 0, 0.5);
+	--add-button-hover-background: rgba(0, 0, 0, 0.2);
+	--add-button-hover-color: rgba(255, 255, 255, 0.5);
+
+	--toggle-button-background: rgba(255, 255, 255, 0.1);
+	--toggle-button-color: white;
+
+	--title: white;
+}
+
+body {
+	margin: 0;
+	background: var(--background);
+}
+
+#app {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 200px);
+	padding: 24px;
+	gap: 24px;
+}
+
+.note {
+	height: 200px;
+	box-sizing: border-box;
+	padding: 16px;
+	border: none;
+	border-radius: 10px;
+	/*box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);*/
+	resize: none;
+	font-family: sans-serif;
+	font-size: 16px;
+
+	background: var(--note-background);
+	color: var(--note-colour);
+}
+
+.add-note {
+	height: 200px;
+	border: none;
+	outline: none;
+	background: var(--add-button-background);
+	border-radius: 10px;
+	font-size: 120px;
+	color: var(--add-button-color);
+	cursor: pointer;
+	transition: background color 0.2s;
+}
+
+.add-note:hover {
+	background: var(--add-button-hover-background);
+	color: var(--add-button-hover-color);
+}
+
+.menu {
+	display: grid;
+	font-family: sans-serif;
+	grid-template-columns: auto 1fr;
+	padding: 24px;
+	grid-gap: 24px;
+	padding-bottom: 0;
+	align-items: center;
+	/*text-align: center;*/
+	/*padding-top: 24px;*/
+	/*padding-left: 24px;*/
+}
+
+#switch-mode {
+	border: none;
+	box-sizing: border-box;
+	color: var(--toggle-button-color);
+	background-color: var(--toggle-button-background);
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 2rem;
+}
+
+.title {
+	font-size: 2em;
+	color: var(--title);
+}
